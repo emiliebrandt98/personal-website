@@ -1,7 +1,29 @@
 @import "variables.css";
+@import "styles.css";
 
 *,
 *: : before,
 *: : after {
   box-sizing: border-box;
+}
+
+html {
+  background-color: var(--primary-background);
+}
+
+body {
+  font-family: Inter;
+  color: var(--body-text);
+  padding: 10px 51px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Bricolage Grotesque;
+  color: var(--main-text);
 }

@@ -4,25 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/global.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Emilie Brandt</title>
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav class="navigation" aria-label="Hauptnavigation">
+        <a class="navigation-logo" href="startseite">
+          <img
+            src="./assets/logo_emiliebrandt.svg"
+            alt="Logo von Emilie Brandt"
+          />
+        </a>
+        <ul class="navigation__list">
           <li>
-            <img
-              src="./assets/logo_emiliebrandt.svg"
-              alt="Logo von Emilie Brandt"
-            />
+            <a
+              class="navigation__list-link"
+              href="portfolio.de"
+              aria-current="page"
+              >Portfolio</a
+            >
           </li>
-          <li><a href="portfolio">Portfolio</a></li>
-          <li><a href="uebermich">Über mich</a></li>
-          <li><a href="blog">Blog</a></li>
-          <li><a href="suchen">Suchen</a></li>
           <li>
-            <button><a href="kontakt">Kontakt</a></button>
+            <a
+              class="navigation__list-link"
+              href="uebermich.de"
+              aria-current="page"
+              >Über mich</a
+            >
+          </li>
+          <li>
+            <a class="navigation__list-link" href="blog" aria-current="page"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a class="navigation__list-link" href="suchen" aria-current="page"
+              >Suchen</a
+            >
+          </li>
+          <li>
+            <a
+              class="primary__button"
+              href="kontakt"
+              aria-current="page"
+              class="btn"
+              >Kontakt</a
+            >
           </li>
         </ul>
       </nav>
@@ -40,6 +80,7 @@
       <a href="portfolio">Zum Portfolio</a>
       <button><a href="uebermich">Über mich</a></button>
     </main>
+    <aside></aside>
     <footer>
       <a href="impressum">Impressum</a>
       <a href="datenschutz">Datenschutz</a>

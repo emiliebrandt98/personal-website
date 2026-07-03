@@ -1,0 +1,20 @@
+:root {
+  /* colors */
+  --primary-background: #fafbfa;
+  --secondary-background: #02705a;
+  --tertiary: #f0f2f1;
+  --primary: #02705a;
+  --secondary: #d93d04;
+  --main-text: #1a3732;
+  --body-text: #344d49;
+
+  /* spacing */
+  --spacing-xxxl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-xl: 24px;
+  --spacing-m: 16px;
+  --spacing-s: 12px;
+  --spacing-xs: 8px;
+
+  /* text */
+}
