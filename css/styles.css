@@ -1,5 +1,4 @@
-/* header + navigation */
-.navigation {
+header + navigation .navigation {
   position: sticky;
   top: 0;
   display: flex;
