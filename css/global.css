@@ -1,8 +1,7 @@
 @import "styles.css";
+@import "forms.css";
 
-*,
-*: : before,
-*: : after {
+*, *: : before, *: : after {
   box-sizing: border-box;
 }
 

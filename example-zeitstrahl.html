@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Zeitstrahl – Werdegang</title>
+<style>
+  :root {
+    --line-color: #d4d4d4;
+    --accent: #3454d1;
+    --content-bg: #f5f5f5;
+    --text-muted: #5a5a5a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+
+  .timeline-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .timeline-section h2 {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* ol statt ul, weil die Reihenfolge (neueste zuerst) inhaltlich bedeutsam ist */
+  .timeline {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Die senkrechte Mittellinie ist kein eigenes HTML-Element,
+     sondern ein Pseudo-Element auf dem <ol> */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--line-color);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(50% + 2rem);
+    margin-bottom: 2.5rem;
+  }
+
+  /* Jeder zweite Eintrag wechselt auf die andere Seite */
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: calc(50% + 2rem);
+  }
+
+  .timeline-content {
+    position: relative;
+    max-width: 280px;
+    background: var(--content-bg);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  /* Kurze Verbindungslinie zwischen Box und Mittellinie */
+  .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 2px;
+    background: var(--line-color);
+    transform: translateY(-50%);
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::before {
+    right: -2rem;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -2rem;
+  }
+
+  .timeline-date {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* Mobile: Linie nach links, alle Boxen auf einer Spalte */
+  @media (max-width: 600px) {
+    .timeline::before {
+      left: 8px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-left: 2.5rem;
+      padding-right: 0;
+    }
+
+    .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+      left: -2rem;
+      right: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section class="timeline-section">
+  <h2>Werdegang</h2>
+  <ol class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-content">
+        <span class="timeline-date">2024 – heute</span>
+        <h3>Weiterbildung Web Development &amp; KI</h3>
+        <p>Schwerpunkt Frontend: HTML, CSS, JavaScript, React, Next.js</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-content">
+        <span class="timeline-date">2021 – 2024</span>
+        <h3>Kommunikationsdesignerin</h3>
+        <p>Gestaltung im Bereich Gesundheitsförderung</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-content">
+        <span class="timeline-date">2020 – 2021</span>
+        <h3>Praktikum Mediendesign</h3>
+        <p>Konzeption und Umsetzung von Kommunikationsmaterial</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-content">
+        <span class="timeline-date">2017 – 2020</span>
+        <h3>Bachelor Kommunikationsdesign</h3>
+        <p>Schwerpunkt visuelle Gestaltung</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+</body>
+</html>

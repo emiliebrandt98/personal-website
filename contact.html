@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <html lang="de">
+    <head>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <link rel="stylesheet" href="./css/global.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+      />
+      <title>Emilie Brandt</title>
+    </head>
+
+    <body>
+      <section>
+        <h1 id="form-title">h1-text</h1>
+        <p id="form-description">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+          veritatis eum. Illo eligendi debitis laboriosam, explicabo ipsa sunt
+          vero dolore reprehenderit iure aspernatur repudiandae neque molestias
+          porro veniam rerum dolorum!
+        </p>
+        <a href="">Link</a>
+      </section>
+      <section>
+        <form
+          data.js="contact-form"
+          aria-labelledby="form-title"
+          aria-describedby="form-description"
+        >
+          <label for="input-name">Name:</label>
+          <input type="text" name="inputName" id="input-name" required />
+
+          <label for="input-email">E-Mail:</label>
+          <input type="email" name="" id="input-email" required />
+
+          <label for="input-discovered">Wie hast du mich gefunden?</label>
+          <input type="text" name="" id="input-discovered" />
+
+          <label for="input-select"
+            >Hast du ein Thema über das du sprechen möchtest?</label
+          >
+          <select name="" id="input-select">
+            <option value="none">--Bitte wähle eine Option--</option>
+            <option value="one">Option1</option>
+            <option value="two">Option2</option>
+            <option value="three">Sonstiges</option>
+          </select>
+
+          <label for="input-message">Schreib mir eine Nachricht:</label>
+          <textarea
+            data-js="contact-message"
+            name="inputMessage"
+            id="input-message"
+            maxlength="250"
+            rows="5"
+            placeholder="Sag hallo!"
+          ></textarea>
+          <p class="">
+            <span data-js="remaining-characters">250</span> Zeichen noch
+          </p>
+          <button type="submit">Abschicken</button>
+        </form>
+      </section>
+    </body>
+  </html>
+</html>
